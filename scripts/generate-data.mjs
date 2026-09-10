@@ -1,0 +1,251 @@
+/**
+ * PokeAPI data pipeline for Pixelmon (Kanto region, Gen 1).
+ *
+ * Fetches the real 150 Kanto Pokemon (PokeAPI ids 1..150) and generates:
+ *   - src/data/monsters.json   : species templates (accurate stats/types/etc.)
+ *   - src/data/moves.json       : move definitions
+ *
+ * Everything is pulled live from https://pokeapi.co, so the data is factual,
+ * not hand-authored (this is what fixes the earlier "hallucinated monster" problem).
+ *
+ * Usage: node scripts/generate-data.mjs   (rate-limited; ~10 min for 150 monsters)
+ */
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const API = "https://pokeapi.co/api/v2";
+const OUT_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../src/data");
+const KANTO_MAX = 150; // ids 1..150 = original Kanto dex
+const DELAY_MS = 300; // PokeAPI politeness (~3.3 req/s; read-only endpoint)
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function fetchJson(url, retries = 3) {
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      if (attempt === retries) throw err;
+      console.error(`  retry ${attempt + 1} for ${url}: ${err.message}`);
+      await sleep(1500 * (attempt + 1));
+    }
+  }
+}
+
+// ---- evolution parsing -----------------------------------------------------
+// PokeAPI evolution chain is nested: each node has species + evolves_to[].
+function collectEvolutions(node, out) {
+  const children = node.evolves_to ?? node.chain?.evolves_to ?? [];
+  for (const child of children) {
+    const detail = (child.evolution_details ?? [])[0] ?? {};
+    const trigger = detail.trigger ?? {};
+    const tname = trigger.name ?? "";
+    let method = "level";
+    let requirement = String(detail.min_level ?? 0);
+    let condition;
+
+    switch (tname) {
+      case "level-up":
+        method = "level";
+        requirement = String(detail.min_level ?? 0);
+        break;
+      case "use-item":
+        method = "stone";
+        requirement = detail.item?.name ?? "any"; // e.g. fire-stone
+        break;
+      case "trade":
+        method = "trade";
+        requirement = "any";
+        break;
+      case "known-move":
+        method = "move";
+        requirement = detail.known_move?.name ?? "any";
+        break;
+      case "throw":
+        method = "location";
+        requirement = "thrown";
+        break;
+      case "other":
+        method = "location";
+        requirement = detail.location?.name ?? "any";
+        break;
+      default:
+        method = "level";
+        requirement = String(detail.min_level ?? 0);
+    }
+
+    // Happiness-based evolutions (e.g. Greavard, some friendship evolutions).
+    if (detail.min_happiness != null) {
+      method = "friendship";
+      requirement = String(detail.min_happiness);
+    }
+
+    // Day / night conditions (detail.hour ranges).
+    if (detail.hour) {
+      condition = detail.hour >= 0 && detail.hour < 18 ? "day" : "night";
+    }
+
+    out.push({
+      to: child.species.name,
+      method,
+      requirement,
+      ...(condition ? { condition } : {}),
+    });
+    collectEvolutions(child, out);
+  }
+}
+
+// ---- species + evolution ---------------------------------------------------
+async function loadSpecies(pokemon) {
+  const sp = await fetchJson(pokemon.species.url);
+  const genderRatio = sp.gender_rate === -1 ? -1 : sp.gender_rate * 12.5; // 0..100, -1 genderless
+  const dexEntry = (sp.flavor_entries ?? [])
+    .find((e) => e.language.name === "en")
+    ?.flavor_text?.replace(/[\n\f\r]/g, " ")
+    .trim();
+  return {
+    catchRate: sp.catch_rate,
+    baseFriendship: sp.base_friendship ?? 70,
+    genderRatio,
+    eggGroups: (sp.egg_groups ?? []).map((e) => e.name),
+    growthRate: sp.growth_rate?.name ?? "medium-slow",
+    category: sp.category?.replace(/\b\w/g, (c) => c.toUpperCase()) ?? "",
+    dexEntry,
+    evolutionChainUrl: sp.evolution_chain?.url,
+  };
+}
+
+// ---- moves -----------------------------------------------------------------
+async function loadLearnset(pokemon) {
+  const set = [];
+  for (const ml of pokemon.moves ?? []) {
+    const vgs = ml.version_group_details ?? [];
+    for (const vg of vgs) {
+      if (vg.move_learn_method.name !== "level-up") continue;
+      set.push({ level: vg.level, move: ml.move.name });
+    }
+  }
+  return set.sort((a, b) => a.level - b.level || a.move.localeCompare(b.move));
+}
+
+// ---- sprites ---------------------------------------------------------------
+function pickSprite(pokemon, key) {
+  const other = pokemon.sprites.other ?? {};
+  return (
+    other["official-artwork"]?.[key] ??
+    pokemon.sprites[key] ??
+    pokemon.sprites.icons?.[key]
+  );
+}
+
+// ---- main ------------------------------------------------------------------
+async function main() {
+  fs.mkdirSync(OUT_DIR, { recursive: true });
+  const moveCache = new Map(); // move url -> move def
+  const chainCache = new Map(); // chain url -> parsed evolution list
+
+  console.log(`Fetching ${KANTO_MAX} Kanto Pokemon (ids 1..${KANTO_MAX})...`);
+  const monsters = [];
+
+  for (let id = 1; id <= KANTO_MAX; id++) {
+    const p = await fetchJson(`${API}/pokemon/${id}`);
+    const sp = await loadSpecies(p);
+    await sleep(DELAY_MS);
+
+    const chain = await fetchJson(sp.evolutionChainUrl);
+    const evolutions = [];
+    collectEvolutions(chain, evolutions);
+
+    const learnset = await loadLearnset(p);
+    await sleep(DELAY_MS);
+
+    // Queue move-unique fetches (dedup).
+    for (const { move } of learnset) {
+      if (!moveCache.has(move)) moveCache.set(move, { url: `${API}/move/${move}` });
+    }
+
+    const types = (p.types ?? []).map((t) => t.type.name);
+    const baseStats = Object.fromEntries(
+      (p.stats ?? []).map((s) => [s.stat.name, s.base_stat])
+    );
+    const evYield = Object.fromEntries(
+      (p.stats ?? [])
+        .filter((s) => s.effort > 0)
+        .map((s) => [s.stat.name, s.effort])
+    );
+    const abilities = (p.abilities ?? [])
+      .map((a) => a.ability.name)
+      .filter((v, i, a) => a.indexOf(v) === i); // dedup, keep order
+
+    monsters.push({
+      id: `PM-${String(id).padStart(3, "0")}`,
+      num: id,
+      name: p.name,
+      types,
+      baseStats,
+      evYield,
+      abilities,
+      height: p.height / 10, // dm -> m
+      weight: p.weight / 10, // hg -> kg
+      genderRatio: sp.genderRatio,
+      eggGroups: sp.eggGroups,
+      growthRate: sp.growthRate,
+      catchRate: sp.catchRate,
+      baseFriendship: sp.baseFriendship,
+      baseExp: p.base_experience,
+      learnset,
+      evolution: evolutions,
+      pokedex: { category: sp.category, entry: sp.dexEntry },
+      sprites: {
+        front: pickSprite(p, "front_default"),
+        back: pickSprite(p, "back_default"),
+        icon: pickSprite(p, "front_default"),
+      },
+    });
+
+    if (id % 25 === 0) console.log(`  ${id}/${KANTO_MAX} done`);
+  }
+
+  console.log(`Fetching ${moveCache.size} unique move definitions...`);
+  const moves = [];
+  let moveIdx = 0;
+  for (const { url } of moveCache.values()) {
+    const m = await fetchJson(url);
+    moves.push({
+      id: `MV-${String(++moveIdx).padStart(4, "0")}`,
+      name: m.name.replace(/\b\w/g, (c) => c.toUpperCase()),
+      type: m.type?.name ?? "normal",
+      category: m.damage_class?.name ?? "status",
+      power: m.power ?? 0,
+      accuracy: m.accuracy ?? 0,
+      pp: m.powerPoints ?? 0,
+      damagePower: m.power ?? 0,
+      flavor: (m.flavor_text_entries ?? [])
+        .find((e) => e.language.name === "en")
+        ?.flavor_text?.replace(/[\n\f\r]/g, " ")
+        .trim(),
+    });
+    await sleep(DELAY_MS);
+  }
+
+  // Index moves by slug for cross-referencing learnsets.
+  const moveById = new Map(moves.map((m) => [m.name.toLowerCase().replace(/ /g, "-"), m]));
+
+  fs.writeFileSync(path.join(OUT_DIR, "monsters.json"), JSON.stringify(monsters, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, "moves.json"), JSON.stringify(moves, null, 2));
+
+  console.log("\n=== DONE ===");
+  console.log(`monsters: ${monsters.length}`);
+  console.log(`moves:    ${moves.length}`);
+  console.log(`sample:   ${monsters[0].name} (${monsters[0].id}) -> ${monsters[0].types.join("/")}, exp ${monsters[0].baseExp}`);
+  const withEvo = monsters.filter((m) => m.evolution.length).length;
+  console.log(`monsters w/ evolutions: ${withEvo}`);
+}
+
+main().catch((err) => {
+  console.error("FATAL:", err);
+  process.exit(1);
+});

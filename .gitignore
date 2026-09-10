@@ -1,0 +1,15 @@
+# Build output
+/build/
+
+# Downloaded PokeAPI sprite cache
+/.sprite-cache/
+
+# Session / corpus metadata
+/.corpus.json
+
+# Data-generator logs
+/scripts/*.log
+
+# Editor / OS noise
+*.swp
+.DS_Store
