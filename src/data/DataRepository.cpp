@@ -84,16 +84,16 @@ bool DataRepository::load(const std::string& baseDir) {
             mon.baseStats.hp = bs.value("hp", 0);
             mon.baseStats.attack = bs.value("attack", 0);
             mon.baseStats.defense = bs.value("defense", 0);
-            mon.baseStats.spAttack = bs.value("sp_attack", bs.value("spAttack", 0));
-            mon.baseStats.spDefense = bs.value("sp_defense", bs.value("spDefense", 0));
+            mon.baseStats.spAttack = bs.value("spAttack", 0);
+            mon.baseStats.spDefense = bs.value("spDefense", 0);
             mon.baseStats.speed = bs.value("speed", 0);
 
             const auto& ey = m.value("evYield", json::object());
             mon.evYield.hp = ey.value("hp", 0);
             mon.evYield.attack = ey.value("attack", 0);
             mon.evYield.defense = ey.value("defense", 0);
-            mon.evYield.spAttack = ey.value("sp_attack", ey.value("spAttack", 0));
-            mon.evYield.spDefense = ey.value("sp_defense", ey.value("spDefense", 0));
+            mon.evYield.spAttack = ey.value("spAttack", 0);
+            mon.evYield.spDefense = ey.value("spDefense", 0);
             mon.evYield.speed = ey.value("speed", 0);
 
             mon.abilities = m.value("abilities", std::vector<std::string>{});

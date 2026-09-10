@@ -5,10 +5,14 @@
  *   - src/data/monsters.json   : species templates (accurate stats/types/etc.)
  *   - src/data/moves.json       : move definitions
  *
- * Everything is pulled live from https://pokeapi.co, so the data is factual,
- * not hand-authored (this is what fixes the earlier "hallucinated monster" problem).
+ * The first run fetches everything live from https://pokeapi.co (factual, not
+ * hand-authored — this is what fixes the earlier "hallucinated monster" problem)
+ * and caches every response under scripts/pokeapi-cache/. Later runs serve from
+ * that cache with no network; pass --refresh to re-fetch and repopulate it.
  *
- * Usage: node scripts/generate-data.mjs   (rate-limited; ~10 min for 150 monsters)
+ * Usage:
+ *   node scripts/generate-data.mjs        (use cache, populate it on first run)
+ *   node scripts/generate-data.mjs --refresh   (re-fetch all endpoints live)
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -17,16 +21,38 @@ import { fileURLToPath } from "node:url";
 const API = "https://pokeapi.co/api/v2";
 const OUT_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../src/data");
 const KANTO_MAX = 150; // ids 1..150 = original Kanto dex
-const DELAY_MS = 300; // PokeAPI politeness (~3.3 req/s; read-only endpoint)
+// Disk cache of raw PokeAPI responses: populate once, then serve every later
+// run from disk with no network. Pass --refresh to force a live repopulate.
+const CACHE_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "./pokeapi-cache");
+const REFRESH = process.argv.includes("--refresh");
 
+// Backoff between live-fetch retries only; no per-request politeness delay.
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Stable, readable filename for a cached response. The full URL is part of the
+// key (non-alphanumerics collapsed), so different endpoints never collide.
+function cachePath(url) {
+  return path.join(CACHE_DIR, url.replace(/[^a-zA-Z0-9]+/g, "_") + ".json");
+}
+
 async function fetchJson(url, retries = 3) {
+  // Serve from the on-disk cache when present. --refresh bypasses it to force a
+  // live repopulate. A cache miss falls through to the live fetch below.
+  if (!REFRESH) {
+    try {
+      return JSON.parse(fs.readFileSync(cachePath(url), "utf8"));
+    } catch {
+      /* cache miss */
+    }
+  }
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
+      const data = await res.json();
+      fs.mkdirSync(CACHE_DIR, { recursive: true });
+      fs.writeFileSync(cachePath(url), JSON.stringify(data));
+      return data;
     } catch (err) {
       if (attempt === retries) throw err;
       console.error(`  retry ${attempt + 1} for ${url}: ${err.message}`);
@@ -107,8 +133,8 @@ async function loadSpecies(pokemon) {
     ?.flavor_text?.replace(/[\n\f\r]/g, " ")
     .trim();
   return {
-    catchRate: sp.catch_rate,
-    baseFriendship: sp.base_friendship ?? 70,
+    catchRate: sp.capture_rate,
+    baseFriendship: sp.base_happiness ?? 70,
     genderRatio,
     eggGroups: (sp.egg_groups ?? []).map((e) => e.name),
     growthRate: sp.growth_rate?.name ?? "medium-slow",
@@ -120,14 +146,19 @@ async function loadSpecies(pokemon) {
 
 // ---- moves -----------------------------------------------------------------
 async function loadLearnset(pokemon) {
-  const set = [];
+  // Dedup to the lowest level-up level per move (a move can list multiple levels).
+  const byMove = new Map();
   for (const ml of pokemon.moves ?? []) {
     const vgs = ml.version_group_details ?? [];
     for (const vg of vgs) {
       if (vg.move_learn_method.name !== "level-up") continue;
-      set.push({ level: vg.level, move: ml.move.name });
+      const lvl = vg.level_learned_at; // PokeAPI field name (not "level")
+      if (typeof lvl !== "number") continue;
+      const prev = byMove.get(ml.move.name);
+      if (prev == null || lvl < prev) byMove.set(ml.move.name, lvl);
     }
   }
+  const set = [...byMove.entries()].map(([move, level]) => ({ level, move }));
   return set.sort((a, b) => a.level - b.level || a.move.localeCompare(b.move));
 }
 
@@ -147,20 +178,22 @@ async function main() {
   const moveCache = new Map(); // move url -> move def
   const chainCache = new Map(); // chain url -> parsed evolution list
 
-  console.log(`Fetching ${KANTO_MAX} Kanto Pokemon (ids 1..${KANTO_MAX})...`);
+  console.log(
+    REFRESH
+      ? `Refresh mode: fetching ${KANTO_MAX} Kanto Pokemon (ids 1..${KANTO_MAX}) live...`
+      : `Cache mode: ${KANTO_MAX} Kanto Pokemon (ids 1..${KANTO_MAX}) from ${CACHE_DIR}`
+  );
   const monsters = [];
 
   for (let id = 1; id <= KANTO_MAX; id++) {
     const p = await fetchJson(`${API}/pokemon/${id}`);
     const sp = await loadSpecies(p);
-    await sleep(DELAY_MS);
 
     const chain = await fetchJson(sp.evolutionChainUrl);
     const evolutions = [];
     collectEvolutions(chain, evolutions);
 
     const learnset = await loadLearnset(p);
-    await sleep(DELAY_MS);
 
     // Queue move-unique fetches (dedup).
     for (const { move } of learnset) {
@@ -168,13 +201,18 @@ async function main() {
     }
 
     const types = (p.types ?? []).map((t) => t.type.name);
+    // PokeAPI stat names -> canonical Pixelmon keys (match Monster::Stats fields).
+    const STAT_KEY = {
+      hp: "hp", attack: "attack", defense: "defense",
+      "special-attack": "spAttack", "special-defense": "spDefense", speed: "speed",
+    };
     const baseStats = Object.fromEntries(
-      (p.stats ?? []).map((s) => [s.stat.name, s.base_stat])
+      (p.stats ?? []).map((s) => [STAT_KEY[s.stat.name] ?? s.stat.name, s.base_stat])
     );
     const evYield = Object.fromEntries(
       (p.stats ?? [])
         .filter((s) => s.effort > 0)
-        .map((s) => [s.stat.name, s.effort])
+        .map((s) => [STAT_KEY[s.stat.name] ?? s.stat.name, s.effort])
     );
     const abilities = (p.abilities ?? [])
       .map((a) => a.ability.name)
@@ -221,14 +259,13 @@ async function main() {
       category: m.damage_class?.name ?? "status",
       power: m.power ?? 0,
       accuracy: m.accuracy ?? 0,
-      pp: m.powerPoints ?? 0,
+      pp: m.pp ?? 0,
       damagePower: m.power ?? 0,
       flavor: (m.flavor_text_entries ?? [])
         .find((e) => e.language.name === "en")
         ?.flavor_text?.replace(/[\n\f\r]/g, " ")
         .trim(),
     });
-    await sleep(DELAY_MS);
   }
 
   // Index moves by slug for cross-referencing learnsets.

@@ -10,6 +10,9 @@
 # Data-generator logs
 /scripts/*.log
 
+# Raw PokeAPI response cache (populate once via the generator)
+/scripts/pokeapi-cache/
+
 # Editor / OS noise
 *.swp
 .DS_Store
