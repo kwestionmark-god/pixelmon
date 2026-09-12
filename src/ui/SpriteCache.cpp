@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <filesystem>
 #include <functional>
+#include <iostream>
 #include <sstream>
 #include <string>
 
@@ -42,13 +43,21 @@ std::string SpriteCache::download(const std::string& url) {
 
 sf::Texture* SpriteCache::get(const std::string& url) {
     auto it = textures_.find(url);
-    if (it != textures_.end()) return it->second.get();
+    if (it != textures_.end()) {
+        return it->second.get();
+    }
 
     const std::string local = download(url);
-    if (local.empty()) return nullptr;
+    if (local.empty()) {
+        std::cerr << "[SpriteCache] Download failed for: " << url << "\n";
+        return nullptr;
+    }
 
     auto tex = std::make_shared<sf::Texture>();
-    if (!tex->loadFromFile(local)) return nullptr;
+    if (!tex->loadFromFile(local)) {
+        std::cerr << "[SpriteCache] Failed to load texture from: " << local << "\n";
+        return nullptr;
+    }
 
     textures_.emplace(url, tex);
     return tex.get();

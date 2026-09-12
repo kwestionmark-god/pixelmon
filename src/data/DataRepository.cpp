@@ -31,9 +31,9 @@ bool DataRepository::load(const std::string& baseDir) {
     const std::string movePath = baseDir + "/moves.json";
 
     std::ifstream mf(monsterPath);
-    if (!mf.good()) { std::cerr << "data: missing " << monsterPath << "\n"; return false; }
+    if (!mf.good()) return false;
     std::ifstream vf(movePath);
-    if (!vf.good()) { std::cerr << "data: missing " << movePath << "\n"; return false; }
+    if (!vf.good()) return false;
 
     // Moves are loaded first so the slug index exists when monsters reference them.
     {

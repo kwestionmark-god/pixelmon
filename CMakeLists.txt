@@ -21,6 +21,9 @@ add_executable(pixelmon
   src/types.cpp
   src/core/Game.cpp
   src/core/BattleSystem.cpp
+  src/core/World.cpp
+  src/core/Map.cpp
+  src/core/MapStore.cpp
   src/ui/SpriteCache.cpp
   src/data/DataRepository.cpp
 )
@@ -34,10 +37,14 @@ target_link_libraries(pixelmon PRIVATE
   sfml-system sfml-window sfml-graphics sfml-audio
 )
 
-# Copy generated JSON data next to the executable so it can be run from build/.
-add_custom_command(TARGET pixelmon POST_BUILD
+# Keep generated JSON data in sync next to the executable so it can be run
+# from build/. Runs every build (regenerated maps need no recompile).
+add_custom_target(copy-data ALL
   COMMAND ${CMAKE_COMMAND} -E copy_if_different
-          ${CMAKE_SOURCE_DIR}/src/data/monsters.json $<TARGET_FILE_DIR:pixelmon>/monsters.json
+          ${CMAKE_SOURCE_DIR}/src/data/monsters.json ${CMAKE_BINARY_DIR}/monsters.json
   COMMAND ${CMAKE_COMMAND} -E copy_if_different
-          ${CMAKE_SOURCE_DIR}/src/data/moves.json $<TARGET_FILE_DIR:pixelmon>/moves.json
+          ${CMAKE_SOURCE_DIR}/src/data/moves.json ${CMAKE_BINARY_DIR}/moves.json
+  COMMAND ${CMAKE_COMMAND} -E copy_directory
+          ${CMAKE_SOURCE_DIR}/src/data/maps ${CMAKE_BINARY_DIR}/maps
 )
+add_dependencies(pixelmon copy-data)
