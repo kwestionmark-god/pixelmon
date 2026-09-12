@@ -1,0 +1,890 @@
+[
+  {
+    "id": "pallet_town",
+    "path": "pallet_town.json"
+  },
+  {
+    "id": "viridian_city",
+    "path": "viridian_city.json"
+  },
+  {
+    "id": "pewter_city",
+    "path": "pewter_city.json"
+  },
+  {
+    "id": "cerulean_city",
+    "path": "cerulean_city.json"
+  },
+  {
+    "id": "lavender_town",
+    "path": "lavender_town.json"
+  },
+  {
+    "id": "vermilion_city",
+    "path": "vermilion_city.json"
+  },
+  {
+    "id": "celadon_city",
+    "path": "celadon_city.json"
+  },
+  {
+    "id": "fuchsia_city",
+    "path": "fuchsia_city.json"
+  },
+  {
+    "id": "cinnabar_island",
+    "path": "cinnabar_island.json"
+  },
+  {
+    "id": "indigo_plateau",
+    "path": "indigo_plateau.json"
+  },
+  {
+    "id": "saffron_city",
+    "path": "saffron_city.json"
+  },
+  {
+    "id": "route_1",
+    "path": "route_1.json"
+  },
+  {
+    "id": "route_2",
+    "path": "route_2.json"
+  },
+  {
+    "id": "route_3",
+    "path": "route_3.json"
+  },
+  {
+    "id": "route_4",
+    "path": "route_4.json"
+  },
+  {
+    "id": "route_5",
+    "path": "route_5.json"
+  },
+  {
+    "id": "route_6",
+    "path": "route_6.json"
+  },
+  {
+    "id": "route_7",
+    "path": "route_7.json"
+  },
+  {
+    "id": "route_8",
+    "path": "route_8.json"
+  },
+  {
+    "id": "route_9",
+    "path": "route_9.json"
+  },
+  {
+    "id": "route_10",
+    "path": "route_10.json"
+  },
+  {
+    "id": "route_11",
+    "path": "route_11.json"
+  },
+  {
+    "id": "route_12",
+    "path": "route_12.json"
+  },
+  {
+    "id": "route_13",
+    "path": "route_13.json"
+  },
+  {
+    "id": "route_14",
+    "path": "route_14.json"
+  },
+  {
+    "id": "route_15",
+    "path": "route_15.json"
+  },
+  {
+    "id": "route_16",
+    "path": "route_16.json"
+  },
+  {
+    "id": "route_17",
+    "path": "route_17.json"
+  },
+  {
+    "id": "route_18",
+    "path": "route_18.json"
+  },
+  {
+    "id": "route_19",
+    "path": "route_19.json"
+  },
+  {
+    "id": "route_20",
+    "path": "route_20.json"
+  },
+  {
+    "id": "route_21",
+    "path": "route_21.json"
+  },
+  {
+    "id": "route_22",
+    "path": "route_22.json"
+  },
+  {
+    "id": "route_23",
+    "path": "route_23.json"
+  },
+  {
+    "id": "route_24",
+    "path": "route_24.json"
+  },
+  {
+    "id": "route_25",
+    "path": "route_25.json"
+  },
+  {
+    "id": "reds_house_1f",
+    "path": "reds_house_1f.json"
+  },
+  {
+    "id": "reds_house_2f",
+    "path": "reds_house_2f.json"
+  },
+  {
+    "id": "blues_house",
+    "path": "blues_house.json"
+  },
+  {
+    "id": "oaks_lab",
+    "path": "oaks_lab.json"
+  },
+  {
+    "id": "viridian_pokecenter",
+    "path": "viridian_pokecenter.json"
+  },
+  {
+    "id": "viridian_mart",
+    "path": "viridian_mart.json"
+  },
+  {
+    "id": "viridian_school_house",
+    "path": "viridian_school_house.json"
+  },
+  {
+    "id": "viridian_nickname_house",
+    "path": "viridian_nickname_house.json"
+  },
+  {
+    "id": "viridian_gym",
+    "path": "viridian_gym.json"
+  },
+  {
+    "id": "digletts_cave_route_2",
+    "path": "digletts_cave_route_2.json"
+  },
+  {
+    "id": "viridian_forest_north_gate",
+    "path": "viridian_forest_north_gate.json"
+  },
+  {
+    "id": "route_2_trade_house",
+    "path": "route_2_trade_house.json"
+  },
+  {
+    "id": "route_2_gate",
+    "path": "route_2_gate.json"
+  },
+  {
+    "id": "viridian_forest_south_gate",
+    "path": "viridian_forest_south_gate.json"
+  },
+  {
+    "id": "viridian_forest",
+    "path": "viridian_forest.json"
+  },
+  {
+    "id": "museum_1f",
+    "path": "museum_1f.json"
+  },
+  {
+    "id": "museum_2f",
+    "path": "museum_2f.json"
+  },
+  {
+    "id": "pewter_gym",
+    "path": "pewter_gym.json"
+  },
+  {
+    "id": "pewter_nidoran_house",
+    "path": "pewter_nidoran_house.json"
+  },
+  {
+    "id": "pewter_mart",
+    "path": "pewter_mart.json"
+  },
+  {
+    "id": "pewter_speech_house",
+    "path": "pewter_speech_house.json"
+  },
+  {
+    "id": "pewter_pokecenter",
+    "path": "pewter_pokecenter.json"
+  },
+  {
+    "id": "mt_moon_1f",
+    "path": "mt_moon_1f.json"
+  },
+  {
+    "id": "mt_moon_b1f",
+    "path": "mt_moon_b1f.json"
+  },
+  {
+    "id": "mt_moon_b2f",
+    "path": "mt_moon_b2f.json"
+  },
+  {
+    "id": "cerulean_trashed_house",
+    "path": "cerulean_trashed_house.json"
+  },
+  {
+    "id": "cerulean_trade_house",
+    "path": "cerulean_trade_house.json"
+  },
+  {
+    "id": "cerulean_pokecenter",
+    "path": "cerulean_pokecenter.json"
+  },
+  {
+    "id": "cerulean_gym",
+    "path": "cerulean_gym.json"
+  },
+  {
+    "id": "bike_shop",
+    "path": "bike_shop.json"
+  },
+  {
+    "id": "cerulean_mart",
+    "path": "cerulean_mart.json"
+  },
+  {
+    "id": "mt_moon_pokecenter",
+    "path": "mt_moon_pokecenter.json"
+  },
+  {
+    "id": "route_5_gate",
+    "path": "route_5_gate.json"
+  },
+  {
+    "id": "underground_path_route_5",
+    "path": "underground_path_route_5.json"
+  },
+  {
+    "id": "daycare",
+    "path": "daycare.json"
+  },
+  {
+    "id": "route_6_gate",
+    "path": "route_6_gate.json"
+  },
+  {
+    "id": "underground_path_route_6",
+    "path": "underground_path_route_6.json"
+  },
+  {
+    "id": "route_7_gate",
+    "path": "route_7_gate.json"
+  },
+  {
+    "id": "underground_path_route_7",
+    "path": "underground_path_route_7.json"
+  },
+  {
+    "id": "route_8_gate",
+    "path": "route_8_gate.json"
+  },
+  {
+    "id": "underground_path_route_8",
+    "path": "underground_path_route_8.json"
+  },
+  {
+    "id": "rock_tunnel_pokecenter",
+    "path": "rock_tunnel_pokecenter.json"
+  },
+  {
+    "id": "rock_tunnel_1f",
+    "path": "rock_tunnel_1f.json"
+  },
+  {
+    "id": "power_plant",
+    "path": "power_plant.json"
+  },
+  {
+    "id": "route_11_gate_1f",
+    "path": "route_11_gate_1f.json"
+  },
+  {
+    "id": "digletts_cave_route_11",
+    "path": "digletts_cave_route_11.json"
+  },
+  {
+    "id": "route_11_gate_2f",
+    "path": "route_11_gate_2f.json"
+  },
+  {
+    "id": "route_12_gate_1f",
+    "path": "route_12_gate_1f.json"
+  },
+  {
+    "id": "bills_house",
+    "path": "bills_house.json"
+  },
+  {
+    "id": "vermilion_pokecenter",
+    "path": "vermilion_pokecenter.json"
+  },
+  {
+    "id": "pokemon_fan_club",
+    "path": "pokemon_fan_club.json"
+  },
+  {
+    "id": "vermilion_mart",
+    "path": "vermilion_mart.json"
+  },
+  {
+    "id": "vermilion_gym",
+    "path": "vermilion_gym.json"
+  },
+  {
+    "id": "vermilion_pidgey_house",
+    "path": "vermilion_pidgey_house.json"
+  },
+  {
+    "id": "vermilion_dock",
+    "path": "vermilion_dock.json"
+  },
+  {
+    "id": "ss_anne_1f",
+    "path": "ss_anne_1f.json"
+  },
+  {
+    "id": "ss_anne_2f",
+    "path": "ss_anne_2f.json"
+  },
+  {
+    "id": "ss_anne_3f",
+    "path": "ss_anne_3f.json"
+  },
+  {
+    "id": "ss_anne_b1f",
+    "path": "ss_anne_b1f.json"
+  },
+  {
+    "id": "ss_anne_bow",
+    "path": "ss_anne_bow.json"
+  },
+  {
+    "id": "ss_anne_kitchen",
+    "path": "ss_anne_kitchen.json"
+  },
+  {
+    "id": "ss_anne_captains_room",
+    "path": "ss_anne_captains_room.json"
+  },
+  {
+    "id": "ss_anne_1f_rooms",
+    "path": "ss_anne_1f_rooms.json"
+  },
+  {
+    "id": "ss_anne_2f_rooms",
+    "path": "ss_anne_2f_rooms.json"
+  },
+  {
+    "id": "ss_anne_b1f_rooms",
+    "path": "ss_anne_b1f_rooms.json"
+  },
+  {
+    "id": "victory_road_1f",
+    "path": "victory_road_1f.json"
+  },
+  {
+    "id": "lances_room",
+    "path": "lances_room.json"
+  },
+  {
+    "id": "hall_of_fame",
+    "path": "hall_of_fame.json"
+  },
+  {
+    "id": "underground_path_north_south",
+    "path": "underground_path_north_south.json"
+  },
+  {
+    "id": "champions_room",
+    "path": "champions_room.json"
+  },
+  {
+    "id": "underground_path_west_east",
+    "path": "underground_path_west_east.json"
+  },
+  {
+    "id": "celadon_mart_1f",
+    "path": "celadon_mart_1f.json"
+  },
+  {
+    "id": "celadon_mart_2f",
+    "path": "celadon_mart_2f.json"
+  },
+  {
+    "id": "celadon_mart_3f",
+    "path": "celadon_mart_3f.json"
+  },
+  {
+    "id": "celadon_mart_4f",
+    "path": "celadon_mart_4f.json"
+  },
+  {
+    "id": "celadon_mart_roof",
+    "path": "celadon_mart_roof.json"
+  },
+  {
+    "id": "celadon_mart_elevator",
+    "path": "celadon_mart_elevator.json"
+  },
+  {
+    "id": "celadon_mansion_1f",
+    "path": "celadon_mansion_1f.json"
+  },
+  {
+    "id": "celadon_mansion_2f",
+    "path": "celadon_mansion_2f.json"
+  },
+  {
+    "id": "celadon_mansion_3f",
+    "path": "celadon_mansion_3f.json"
+  },
+  {
+    "id": "celadon_mansion_roof",
+    "path": "celadon_mansion_roof.json"
+  },
+  {
+    "id": "celadon_mansion_roof_house",
+    "path": "celadon_mansion_roof_house.json"
+  },
+  {
+    "id": "celadon_pokecenter",
+    "path": "celadon_pokecenter.json"
+  },
+  {
+    "id": "celadon_gym",
+    "path": "celadon_gym.json"
+  },
+  {
+    "id": "game_corner",
+    "path": "game_corner.json"
+  },
+  {
+    "id": "celadon_mart_5f",
+    "path": "celadon_mart_5f.json"
+  },
+  {
+    "id": "game_corner_prize_room",
+    "path": "game_corner_prize_room.json"
+  },
+  {
+    "id": "celadon_diner",
+    "path": "celadon_diner.json"
+  },
+  {
+    "id": "celadon_chief_house",
+    "path": "celadon_chief_house.json"
+  },
+  {
+    "id": "celadon_hotel",
+    "path": "celadon_hotel.json"
+  },
+  {
+    "id": "lavender_pokecenter",
+    "path": "lavender_pokecenter.json"
+  },
+  {
+    "id": "pokemon_tower_1f",
+    "path": "pokemon_tower_1f.json"
+  },
+  {
+    "id": "pokemon_tower_2f",
+    "path": "pokemon_tower_2f.json"
+  },
+  {
+    "id": "pokemon_tower_3f",
+    "path": "pokemon_tower_3f.json"
+  },
+  {
+    "id": "pokemon_tower_4f",
+    "path": "pokemon_tower_4f.json"
+  },
+  {
+    "id": "pokemon_tower_5f",
+    "path": "pokemon_tower_5f.json"
+  },
+  {
+    "id": "pokemon_tower_6f",
+    "path": "pokemon_tower_6f.json"
+  },
+  {
+    "id": "pokemon_tower_7f",
+    "path": "pokemon_tower_7f.json"
+  },
+  {
+    "id": "mr_fujis_house",
+    "path": "mr_fujis_house.json"
+  },
+  {
+    "id": "lavender_mart",
+    "path": "lavender_mart.json"
+  },
+  {
+    "id": "lavender_cubone_house",
+    "path": "lavender_cubone_house.json"
+  },
+  {
+    "id": "fuchsia_mart",
+    "path": "fuchsia_mart.json"
+  },
+  {
+    "id": "fuchsia_bills_grandpas_house",
+    "path": "fuchsia_bills_grandpas_house.json"
+  },
+  {
+    "id": "fuchsia_pokecenter",
+    "path": "fuchsia_pokecenter.json"
+  },
+  {
+    "id": "wardens_house",
+    "path": "wardens_house.json"
+  },
+  {
+    "id": "safari_zone_gate",
+    "path": "safari_zone_gate.json"
+  },
+  {
+    "id": "fuchsia_gym",
+    "path": "fuchsia_gym.json"
+  },
+  {
+    "id": "fuchsia_meeting_room",
+    "path": "fuchsia_meeting_room.json"
+  },
+  {
+    "id": "seafoam_islands_b1f",
+    "path": "seafoam_islands_b1f.json"
+  },
+  {
+    "id": "seafoam_islands_b2f",
+    "path": "seafoam_islands_b2f.json"
+  },
+  {
+    "id": "seafoam_islands_b3f",
+    "path": "seafoam_islands_b3f.json"
+  },
+  {
+    "id": "seafoam_islands_b4f",
+    "path": "seafoam_islands_b4f.json"
+  },
+  {
+    "id": "vermilion_old_rod_house",
+    "path": "vermilion_old_rod_house.json"
+  },
+  {
+    "id": "fuchsia_good_rod_house",
+    "path": "fuchsia_good_rod_house.json"
+  },
+  {
+    "id": "pokemon_mansion_1f",
+    "path": "pokemon_mansion_1f.json"
+  },
+  {
+    "id": "cinnabar_gym",
+    "path": "cinnabar_gym.json"
+  },
+  {
+    "id": "cinnabar_lab",
+    "path": "cinnabar_lab.json"
+  },
+  {
+    "id": "cinnabar_lab_trade_room",
+    "path": "cinnabar_lab_trade_room.json"
+  },
+  {
+    "id": "cinnabar_lab_metronome_room",
+    "path": "cinnabar_lab_metronome_room.json"
+  },
+  {
+    "id": "cinnabar_lab_fossil_room",
+    "path": "cinnabar_lab_fossil_room.json"
+  },
+  {
+    "id": "cinnabar_pokecenter",
+    "path": "cinnabar_pokecenter.json"
+  },
+  {
+    "id": "cinnabar_mart",
+    "path": "cinnabar_mart.json"
+  },
+  {
+    "id": "indigo_plateau_lobby",
+    "path": "indigo_plateau_lobby.json"
+  },
+  {
+    "id": "copycats_house_1f",
+    "path": "copycats_house_1f.json"
+  },
+  {
+    "id": "copycats_house_2f",
+    "path": "copycats_house_2f.json"
+  },
+  {
+    "id": "fighting_dojo",
+    "path": "fighting_dojo.json"
+  },
+  {
+    "id": "saffron_gym",
+    "path": "saffron_gym.json"
+  },
+  {
+    "id": "saffron_pidgey_house",
+    "path": "saffron_pidgey_house.json"
+  },
+  {
+    "id": "saffron_mart",
+    "path": "saffron_mart.json"
+  },
+  {
+    "id": "silph_co_1f",
+    "path": "silph_co_1f.json"
+  },
+  {
+    "id": "saffron_pokecenter",
+    "path": "saffron_pokecenter.json"
+  },
+  {
+    "id": "mr_psychics_house",
+    "path": "mr_psychics_house.json"
+  },
+  {
+    "id": "route_15_gate_1f",
+    "path": "route_15_gate_1f.json"
+  },
+  {
+    "id": "route_15_gate_2f",
+    "path": "route_15_gate_2f.json"
+  },
+  {
+    "id": "route_16_gate_1f",
+    "path": "route_16_gate_1f.json"
+  },
+  {
+    "id": "route_16_gate_2f",
+    "path": "route_16_gate_2f.json"
+  },
+  {
+    "id": "route_16_fly_house",
+    "path": "route_16_fly_house.json"
+  },
+  {
+    "id": "route_12_super_rod_house",
+    "path": "route_12_super_rod_house.json"
+  },
+  {
+    "id": "route_18_gate_1f",
+    "path": "route_18_gate_1f.json"
+  },
+  {
+    "id": "route_18_gate_2f",
+    "path": "route_18_gate_2f.json"
+  },
+  {
+    "id": "seafoam_islands_1f",
+    "path": "seafoam_islands_1f.json"
+  },
+  {
+    "id": "route_22_gate",
+    "path": "route_22_gate.json"
+  },
+  {
+    "id": "victory_road_2f",
+    "path": "victory_road_2f.json"
+  },
+  {
+    "id": "route_12_gate_2f",
+    "path": "route_12_gate_2f.json"
+  },
+  {
+    "id": "vermilion_trade_house",
+    "path": "vermilion_trade_house.json"
+  },
+  {
+    "id": "digletts_cave",
+    "path": "digletts_cave.json"
+  },
+  {
+    "id": "victory_road_3f",
+    "path": "victory_road_3f.json"
+  },
+  {
+    "id": "rocket_hideout_b1f",
+    "path": "rocket_hideout_b1f.json"
+  },
+  {
+    "id": "rocket_hideout_b2f",
+    "path": "rocket_hideout_b2f.json"
+  },
+  {
+    "id": "rocket_hideout_b3f",
+    "path": "rocket_hideout_b3f.json"
+  },
+  {
+    "id": "rocket_hideout_b4f",
+    "path": "rocket_hideout_b4f.json"
+  },
+  {
+    "id": "rocket_hideout_elevator",
+    "path": "rocket_hideout_elevator.json"
+  },
+  {
+    "id": "silph_co_2f",
+    "path": "silph_co_2f.json"
+  },
+  {
+    "id": "silph_co_3f",
+    "path": "silph_co_3f.json"
+  },
+  {
+    "id": "silph_co_4f",
+    "path": "silph_co_4f.json"
+  },
+  {
+    "id": "silph_co_5f",
+    "path": "silph_co_5f.json"
+  },
+  {
+    "id": "silph_co_6f",
+    "path": "silph_co_6f.json"
+  },
+  {
+    "id": "silph_co_7f",
+    "path": "silph_co_7f.json"
+  },
+  {
+    "id": "silph_co_8f",
+    "path": "silph_co_8f.json"
+  },
+  {
+    "id": "pokemon_mansion_2f",
+    "path": "pokemon_mansion_2f.json"
+  },
+  {
+    "id": "pokemon_mansion_3f",
+    "path": "pokemon_mansion_3f.json"
+  },
+  {
+    "id": "pokemon_mansion_b1f",
+    "path": "pokemon_mansion_b1f.json"
+  },
+  {
+    "id": "safari_zone_east",
+    "path": "safari_zone_east.json"
+  },
+  {
+    "id": "safari_zone_north",
+    "path": "safari_zone_north.json"
+  },
+  {
+    "id": "safari_zone_west",
+    "path": "safari_zone_west.json"
+  },
+  {
+    "id": "safari_zone_center",
+    "path": "safari_zone_center.json"
+  },
+  {
+    "id": "safari_zone_center_rest_house",
+    "path": "safari_zone_center_rest_house.json"
+  },
+  {
+    "id": "safari_zone_secret_house",
+    "path": "safari_zone_secret_house.json"
+  },
+  {
+    "id": "safari_zone_west_rest_house",
+    "path": "safari_zone_west_rest_house.json"
+  },
+  {
+    "id": "safari_zone_east_rest_house",
+    "path": "safari_zone_east_rest_house.json"
+  },
+  {
+    "id": "safari_zone_north_rest_house",
+    "path": "safari_zone_north_rest_house.json"
+  },
+  {
+    "id": "cerulean_cave_2f",
+    "path": "cerulean_cave_2f.json"
+  },
+  {
+    "id": "cerulean_cave_b1f",
+    "path": "cerulean_cave_b1f.json"
+  },
+  {
+    "id": "cerulean_cave_1f",
+    "path": "cerulean_cave_1f.json"
+  },
+  {
+    "id": "name_raters_house",
+    "path": "name_raters_house.json"
+  },
+  {
+    "id": "cerulean_badge_house",
+    "path": "cerulean_badge_house.json"
+  },
+  {
+    "id": "rock_tunnel_b1f",
+    "path": "rock_tunnel_b1f.json"
+  },
+  {
+    "id": "silph_co_9f",
+    "path": "silph_co_9f.json"
+  },
+  {
+    "id": "silph_co_10f",
+    "path": "silph_co_10f.json"
+  },
+  {
+    "id": "silph_co_11f",
+    "path": "silph_co_11f.json"
+  },
+  {
+    "id": "silph_co_elevator",
+    "path": "silph_co_elevator.json"
+  },
+  {
+    "id": "trade_center",
+    "path": "trade_center.json"
+  },
+  {
+    "id": "colosseum",
+    "path": "colosseum.json"
+  },
+  {
+    "id": "loreleis_room",
+    "path": "loreleis_room.json"
+  },
+  {
+    "id": "brunos_room",
+    "path": "brunos_room.json"
+  },
+  {
+    "id": "agathas_room",
+    "path": "agathas_room.json"
+  }
+]

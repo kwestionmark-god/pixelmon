@@ -1,0 +1,1866 @@
+{
+  "id": "fuchsia_meeting_room",
+  "name": "FuchsiaMeetingRoom",
+  "tileset": "LAB",
+  "tilesetFile": "lab",
+  "width": 14,
+  "height": 8,
+  "ground": [
+    [
+      {
+        "tileType": 8,
+        "spriteIndex": 24,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 25,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 24,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 25,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 4,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 5,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 12,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 13,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 4,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 5,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 212,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 213,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 4,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 5,
+        "solid": true
+      }
+    ],
+    [
+      {
+        "tileType": 8,
+        "spriteIndex": 26,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 27,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 26,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 27,
+        "solid": true
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 6,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 7,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 14,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 15,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 6,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 7,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 214,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 215,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 6,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 7,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 28,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 29,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 28,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 29,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 224,
+        "solid": false
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 225,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 228,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 229,
+        "solid": true
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 28,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 29,
+        "solid": false
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 60,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 61,
+        "solid": true
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 28,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 29,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 30,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 31,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 30,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 31,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 226,
+        "solid": false
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 227,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 230,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 231,
+        "solid": true
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 30,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 31,
+        "solid": false
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 62,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 63,
+        "solid": true
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 30,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 31,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 208,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 209,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 28,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 29,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 216,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 217,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 220,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 221,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 220,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 221,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 220,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 221,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 220,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 221,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 8,
+        "spriteIndex": 210,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 211,
+        "solid": true
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 30,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 31,
+        "solid": false
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 218,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 219,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 222,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 223,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 222,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 223,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 222,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 223,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 222,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 223,
+        "solid": true
+      }
+    ],
+    [
+      {
+        "tileType": 8,
+        "spriteIndex": 52,
+        "solid": true
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 53,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 28,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 29,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 48,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 49,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 28,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 29,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 28,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 29,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 28,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 29,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 56,
+        "solid": false
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 57,
+        "solid": true
+      }
+    ],
+    [
+      {
+        "tileType": 8,
+        "spriteIndex": 54,
+        "solid": true
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 55,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 30,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 31,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 50,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 51,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 30,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 31,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 30,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 31,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 30,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 31,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 58,
+        "solid": false
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 59,
+        "solid": true
+      }
+    ]
+  ],
+  "objects": [
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ]
+  ],
+  "overlay": [
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ]
+  ],
+  "warps": [
+    {
+      "x": 4,
+      "y": 7,
+      "targetMap": "last_map",
+      "warpId": 6
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "targetMap": "last_map",
+      "warpId": 6
+    }
+  ],
+  "npcs": [
+    {
+      "x": 4,
+      "y": 1,
+      "sprite": "SPRITE_SAFARI_ZONE_WORKER",
+      "movement": "STAY",
+      "textId": "TEXT_FUCHSIAMEETINGROOM_SAFARI_ZONE_WORKER1"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "sprite": "SPRITE_SAFARI_ZONE_WORKER",
+      "movement": "STAY",
+      "textId": "TEXT_FUCHSIAMEETINGROOM_SAFARI_ZONE_WORKER2"
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "sprite": "SPRITE_SAFARI_ZONE_WORKER",
+      "movement": "STAY",
+      "textId": "TEXT_FUCHSIAMEETINGROOM_SAFARI_ZONE_WORKER3"
+    }
+  ],
+  "signs": [],
+  "connections": [],
+  "encounters": {
+    "grass": [
+      {
+        "level": 30,
+        "species": 120
+      },
+      {
+        "level": 30,
+        "species": 116
+      },
+      {
+        "level": 32,
+        "species": 90
+      },
+      {
+        "level": 32,
+        "species": 116
+      },
+      {
+        "level": 28,
+        "species": 79
+      },
+      {
+        "level": 30,
+        "species": 86
+      },
+      {
+        "level": 30,
+        "species": 79
+      },
+      {
+        "level": 28,
+        "species": 86
+      },
+      {
+        "level": 38,
+        "species": 87
+      },
+      {
+        "level": 37,
+        "species": 117
+      },
+      {
+        "level": 30,
+        "species": 90
+      },
+      {
+        "level": 30,
+        "species": 98
+      },
+      {
+        "level": 32,
+        "species": 120
+      },
+      {
+        "level": 32,
+        "species": 98
+      },
+      {
+        "level": 28,
+        "species": 54
+      },
+      {
+        "level": 30,
+        "species": 86
+      },
+      {
+        "level": 30,
+        "species": 54
+      },
+      {
+        "level": 28,
+        "species": 86
+      },
+      {
+        "level": 38,
+        "species": 87
+      },
+      {
+        "level": 37,
+        "species": 99
+      }
+    ],
+    "water": []
+  }
+}

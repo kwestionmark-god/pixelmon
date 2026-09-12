@@ -1,0 +1,301 @@
+{
+  "id": "celadon_mart_elevator",
+  "name": "CeladonMartElevator",
+  "tileset": "LOBBY",
+  "tilesetFile": "lobby",
+  "width": 4,
+  "height": 4,
+  "ground": [
+    [
+      {
+        "tileType": 8,
+        "spriteIndex": 168,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 169,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 172,
+        "solid": true
+      },
+      {
+        "tileType": 8,
+        "spriteIndex": 173,
+        "solid": true
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 170,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 171,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 174,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 175,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 160,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 161,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 164,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 165,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 162,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 163,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 166,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 167,
+        "solid": false
+      }
+    ]
+  ],
+  "objects": [
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ]
+  ],
+  "overlay": [
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ],
+    [
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      },
+      {
+        "tileType": 0,
+        "spriteIndex": 0,
+        "solid": false
+      }
+    ]
+  ],
+  "warps": [
+    {
+      "x": 1,
+      "y": 3,
+      "targetMap": "celadon_mart_1f",
+      "warpId": 5
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "targetMap": "celadon_mart_1f",
+      "warpId": 5
+    }
+  ],
+  "npcs": [],
+  "signs": [
+    {
+      "x": 3,
+      "y": 0,
+      "textId": "TEXT_CELADONMARTELEVATOR"
+    }
+  ],
+  "connections": []
+}
