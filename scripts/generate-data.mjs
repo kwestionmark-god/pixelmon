@@ -163,11 +163,16 @@ async function loadLearnset(pokemon) {
 }
 
 // ---- sprites ---------------------------------------------------------------
+// Use regular sprites (front_default/back_default) which are 96x96,
+// not the official artwork which is huge (~1425x1425).
+// Showdown sprites (~45x49) are good for overworld but are animated GIFs.
 function pickSprite(pokemon, key) {
+  // Priority: regular sprite -> showdown (first frame) -> official artwork
   const other = pokemon.sprites.other ?? {};
   return (
-    other["official-artwork"]?.[key] ??
     pokemon.sprites[key] ??
+    other.showdown?.[key.replace("_default", "")] ??
+    other["official-artwork"]?.[key] ??
     pokemon.sprites.icons?.[key]
   );
 }
